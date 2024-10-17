@@ -1,0 +1,6 @@
+{
+	"model_name": "m1",
+	"model_path": "pretrained/m/m1.pth",
+	"event_tensor_normalization": false,
+	"post_process_norm": "none"
+}
