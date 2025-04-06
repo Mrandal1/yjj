@@ -295,7 +295,7 @@ def eval_method_on_sequence_s(dataset_name, eval_config, method_name, model, met
         voxel = cropper.pad(voxel)
         with CudaTimer(method_name):
             output, pre_bins = model(voxel, pre_bins)
-        image = cropper.crop(output['i'])
+        image = cropper.crop(output['image'])
         image = torch2cv2(image)
         image = post_process_normalization(image, post_process_norm)
         if has_reference_frames:
